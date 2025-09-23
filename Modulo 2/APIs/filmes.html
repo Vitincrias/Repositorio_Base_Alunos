@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Netflix - Login e Catálogo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #141414;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    /* Tela de login */
+    #login-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #login-screen h1 {
+      color: #e50914;
+      margin-bottom: 20px;
+      font-size: 3rem;
+      letter-spacing: 3px;
+    }
+
+    #login-screen input {
+      padding: 12px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      border: none;
+      width: 300px;
+      max-width: 90vw;
+    }
+
+    #login-screen button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      background-color: #e50914;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #login-screen button:hover {
+      background-color: #b20710;
+    }
+
+    /* Tela do catálogo */
+    #catalog-screen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    #greeting {
+      color: #e50914;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    h2.catalog-title {
+      color: #e50914;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      width: 100%;
+    }
+
+    .movie-list {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .movie-card {
+      background-color: #222;
+      border-radius: 5px;
+      width: 150px;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(229, 9, 20, 0.8);
+      z-index: 10;
+    }
+
+    .movie-poster {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-bottom: 1px solid #333;
+    }
+
+    .movie-title {
+      padding: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+      text-align: center;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .movie-list::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .movie-list::-webkit-scrollbar-track {
+      background: #141414;
+    }
+
+    .movie-list::-webkit-scrollbar-thumb {
+      background-color: #e50914;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      #login-screen input {
+        width: 90vw;
+      }
+
+      .movie-card {
+        width: 120px;
+      }
+
+      .movie-poster {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Tela de Login -->
+    <div id="login-screen">
+      <h1>Netflix</h1>
+      <input type="text" id="username" placeholder="Digite seu nome" />
+      <button onclick="entrar()">Entrar</button>
+    </div>
+
+    <!-- Tela do Catálogo -->
+    <div id="catalog-screen">
+      <div id="greeting"></div>
+
+      <section>
+        <h2 class="catalog-title">Drama</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster" src="https://image.tmdb.org/t/p/w200/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="Ainda Estou Aqui" />
+            <div class="movie-title">Ainda Estou Aqui</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://image.tmdb.org/t/p/w200/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="O Poderoso Chefão" />
+            <div class="movie-title">O Poderoso Chefão</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://tse4.mm.bing.net/th/id/OIP.mwwEYf9ne3IUUjUVFgAuxQHaK3?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ela" />
+            <div class="movie-title">Ela</div>
+          </div>
+        </div>
+
+        <h2 class="catalog-title">Comédia</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster" src="https://i1.wp.com/pocilga.com.br/wp-content/uploads/2017/04/modern-times-cartaz.jpg?w=902" alt="Tempos Modernos" />
+            <div class="movie-title">Tempos Modernos</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://m.media-amazon.com/images/I/91MNOnNtcUL._AC_UF894,1000_QL80_.jpg" alt="American Pie" />
+            <div class="movie-title">American Pie</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://th.bing.com/th/id/OIP.ITuwrLoekQD4krAh9lvqjAHaLH?w=186&h=279&c=7&r=0&o=7&pid=1.7&rm=3" alt="Dr. Dolittle" />
+            <div class="movie-title">Dr. Dolittle</div>
+          </div>
+        </div>
+
+        <h2 class="catalog-title">Policial</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster" src="https://tse4.mm.bing.net/th/id/OIP.FFCl5Y_7gAmoVV-ryuitBAHaK_?rs=1&pid=ImgDetMain&o=7&rm=3" alt="O Exterminador do Futuro" />
+            <div class="movie-title">O Exterminador do Futuro</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://http2.mlstatic.com/D_NQ_NP_779508-MLU70354534557_072023-O.webp" alt="O Procurado" />
+            <div class="movie-title">O Procurado</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://image.tmdb.org/t/p/w200/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg" alt="Velozes e Furiosos" />
+            <div class="movie-title">Velozes e Furiosos</div>
+          </div>
+        </div>
+
+        <h2 class="catalog-title">Guerra</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster" src="https://media.senscritique.com/media/000019432741/source_big/Rambo.jpg" alt="Rambo" />
+            <div class="movie-title">Rambo</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://tse4.mm.bing.net/th/id/OIP.wzTMNtT3o5xyrliagL1DkAHaK9?rs=1&pid=ImgDetMain&o=7&rm=3" alt="1917" />
+            <div class="movie-title">1917</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://tse3.mm.bing.net/th/id/OIP.7syPjWmbWV0D9Wh0NXHbxgHaK3?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Até o Último Homem" />
+            <div class="movie-title">Até o Último Homem</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function entrar() {
+      const nome = document.getElementById('username').value.trim();
+      if (nome.length === 0) {
+        alert('Por favor, digite seu nome!');
+        return;
+      }
+
+      // Esconde a tela de login
+      document.getElementById('login-screen').style.display = 'none';
+
+      // Mostra a tela do catálogo
+      const catalogScreen = document.getElementById('catalog-screen');
+      catalogScreen.style.display = 'flex';
+
+      // Mostra a saudação com o nome do usuário
+      const greetingEl = document.getElementById('greeting');
+      greetingEl.textContent = `Olá, ${nome}! Seja bem-vindo(a) ao catálogo Netflix!`;
+    }
+  </script>
+</body>
+
+</html>
+
