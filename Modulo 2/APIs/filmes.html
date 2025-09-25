@@ -70,7 +70,7 @@
 
     /* Tela do catálogo */
     #catalog-screen {
-      display: none;
+      display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
@@ -172,13 +172,6 @@
 
 <body>
   <div class="container">
-    <!-- Tela de Login -->
-    <div id="login-screen">
-      <h1>Netflix</h1>
-      <input type="text" id="username" placeholder="Digite seu nome" />
-      <button onclick="entrar()">Entrar</button>
-    </div>
-
     <!-- Tela do Catálogo -->
     <div id="catalog-screen">
       <div id="greeting"></div>
@@ -187,15 +180,19 @@
         <h2 class="catalog-title">Drama</h2>
         <div class="movie-list">
           <div class="movie-card">
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w200/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="Ainda Estou Aqui" />
+            <img class="movie-poster" src="https://image.tmdb.org/t/p/w200/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+              alt="Ainda Estou Aqui" />
             <div class="movie-title">Ainda Estou Aqui</div>
           </div>
           <div class="movie-card">
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w200/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="O Poderoso Chefão" />
+            <img class="movie-poster" src="https://image.tmdb.org/t/p/w200/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
+              alt="O Poderoso Chefão" />
             <div class="movie-title">O Poderoso Chefão</div>
           </div>
           <div class="movie-card">
-            <img class="movie-poster" src="https://tse4.mm.bing.net/th/id/OIP.mwwEYf9ne3IUUjUVFgAuxQHaK3?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ela" />
+            <img class="movie-poster"
+              src="https://tse4.mm.bing.net/th/id/OIP.mwwEYf9ne3IUUjUVFgAuxQHaK3?rs=1&pid=ImgDetMain&o=7&rm=3"
+              alt="Ela" />
             <div class="movie-title">Ela</div>
           </div>
         </div>
@@ -203,15 +200,20 @@
         <h2 class="catalog-title">Comédia</h2>
         <div class="movie-list">
           <div class="movie-card">
-            <img class="movie-poster" src="https://i1.wp.com/pocilga.com.br/wp-content/uploads/2017/04/modern-times-cartaz.jpg?w=902" alt="Tempos Modernos" />
+            <img class="movie-poster"
+              src="https://i1.wp.com/pocilga.com.br/wp-content/uploads/2017/04/modern-times-cartaz.jpg?w=902"
+              alt="Tempos Modernos" />
             <div class="movie-title">Tempos Modernos</div>
           </div>
           <div class="movie-card">
-            <img class="movie-poster" src="https://m.media-amazon.com/images/I/91MNOnNtcUL._AC_UF894,1000_QL80_.jpg" alt="American Pie" />
+            <img class="movie-poster" src="https://m.media-amazon.com/images/I/91MNOnNtcUL._AC_UF894,1000_QL80_.jpg"
+              alt="American Pie" />
             <div class="movie-title">American Pie</div>
           </div>
           <div class="movie-card">
-            <img class="movie-poster" src="https://th.bing.com/th/id/OIP.ITuwrLoekQD4krAh9lvqjAHaLH?w=186&h=279&c=7&r=0&o=7&pid=1.7&rm=3" alt="Dr. Dolittle" />
+            <img class="movie-poster"
+              src="https://th.bing.com/th/id/OIP.ITuwrLoekQD4krAh9lvqjAHaLH?w=186&h=279&c=7&r=0&o=7&pid=1.7&rm=3"
+              alt="Dr. Dolittle" />
             <div class="movie-title">Dr. Dolittle</div>
           </div>
         </div>
@@ -219,15 +221,19 @@
         <h2 class="catalog-title">Policial</h2>
         <div class="movie-list">
           <div class="movie-card">
-            <img class="movie-poster" src="https://tse4.mm.bing.net/th/id/OIP.FFCl5Y_7gAmoVV-ryuitBAHaK_?rs=1&pid=ImgDetMain&o=7&rm=3" alt="O Exterminador do Futuro" />
+            <img class="movie-poster"
+              src="https://tse4.mm.bing.net/th/id/OIP.FFCl5Y_7gAmoVV-ryuitBAHaK_?rs=1&pid=ImgDetMain&o=7&rm=3"
+              alt="O Exterminador do Futuro" />
             <div class="movie-title">O Exterminador do Futuro</div>
           </div>
           <div class="movie-card">
-            <img class="movie-poster" src="https://http2.mlstatic.com/D_NQ_NP_779508-MLU70354534557_072023-O.webp" alt="O Procurado" />
+            <img class="movie-poster" src="https://http2.mlstatic.com/D_NQ_NP_779508-MLU70354534557_072023-O.webp"
+              alt="O Procurado" />
             <div class="movie-title">O Procurado</div>
           </div>
           <div class="movie-card">
-            <img class="movie-poster" src="https://image.tmdb.org/t/p/w200/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg" alt="Velozes e Furiosos" />
+            <img class="movie-poster" src="https://image.tmdb.org/t/p/w200/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg"
+              alt="Velozes e Furiosos" />
             <div class="movie-title">Velozes e Furiosos</div>
           </div>
         </div>
@@ -235,43 +241,180 @@
         <h2 class="catalog-title">Guerra</h2>
         <div class="movie-list">
           <div class="movie-card">
-            <img class="movie-poster" src="https://media.senscritique.com/media/000019432741/source_big/Rambo.jpg" alt="Rambo" />
+            <img class="movie-poster" src="https://media.senscritique.com/media/000019432741/source_big/Rambo.jpg"
+              alt="Rambo" />
             <div class="movie-title">Rambo</div>
           </div>
           <div class="movie-card">
-            <img class="movie-poster" src="https://tse4.mm.bing.net/th/id/OIP.wzTMNtT3o5xyrliagL1DkAHaK9?rs=1&pid=ImgDetMain&o=7&rm=3" alt="1917" />
+            <img class="movie-poster"
+              src="https://tse4.mm.bing.net/th/id/OIP.wzTMNtT3o5xyrliagL1DkAHaK9?rs=1&pid=ImgDetMain&o=7&rm=3"
+              alt="1917" />
             <div class="movie-title">1917</div>
           </div>
           <div class="movie-card">
-            <img class="movie-poster" src="https://tse3.mm.bing.net/th/id/OIP.7syPjWmbWV0D9Wh0NXHbxgHaK3?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Até o Último Homem" />
+            <img class="movie-poster"
+              src="https://tse3.mm.bing.net/th/id/OIP.7syPjWmbWV0D9Wh0NXHbxgHaK3?rs=1&pid=ImgDetMain&o=7&rm=3"
+              alt="Até o Último Homem" />
             <div class="movie-title">Até o Último Homem</div>
           </div>
         </div>
+        <h2 class="catalog-title">Ação</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://th.bing.com/th/id/OSK.zXwut-wrUj1OX_FGm4ySuOIHENvtGLcW25QLmYLO428?w=160&h=238&c=7&rs=1&qlt=80&o=6&pid=SANGAM"
+              alt="Ainda Estou Aqui" />
+            <div class="movie-title">Deadpool</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://th.bing.com/th/id/OIP.iAf-VzZLAZXHOb2HFuP8dgHaLH?w=115&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+              alt="O Poderoso Chefão" />
+            <div class="movie-title">Vingadore ultimato</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://tse1.mm.bing.net/th/id/OIP.rZdNNSeHnwC-LuwpE1EYFgHaLI?rs=1&pid=ImgDetMain&o=7&rm=3"
+              alt="O Poderoso Chefão" />
+            <div class="movie-title">Matrix</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://trecobox.com.br/wp-content/uploads/2022/04/Doutor-Estranho-No-Multiverso-da-Loucura-2.jpg"
+              alt="Ela" />
+            <div class="movie-title">Doutor Estranho (Multiverso da Loucura)</div>
+          </div>
+        </div>
+
+        <h2 class="catalog-title">Fantasia</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://tse1.mm.bing.net/th/id/OIP.VUvsiYl4Avuhh9WRJ4C9GAHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3"
+              alt="Tempos Modernos" />
+            <div class="movie-title">Escola do bem e do mal</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://th.bing.com/th/id/OIP.hCDRzT-8TXTHmVFZYs27mQHaJQ?w=144&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+              alt="American Pie" />
+            <div class="movie-title">Avatar</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://flxt.tmsimg.com/assets/p13571_p_v13_ag.jpg"
+              alt="Dr. Dolittle" />
+            <div class="movie-title">The addams family </div>
+          </div>
+          </div>
+
+        <h2 class="catalog-title">Ficção Científica</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://tse2.mm.bing.net/th/id/OIP.dcEGVAtFUyp1OedJjdMPfAHaKl?rs=1&pid=ImgDetMain&o=7&rm=3"
+              alt="Interestelar" />
+            <div class="movie-title">Interestelar</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" src="https://tse2.mm.bing.net/th/id/OIP.nYzswvKQw0U_3XnAGy-7OAHaLH?rs=1&pid=ImgDetMain&o=7&rm=3"
+              alt="American Pie" />
+            <div class="movie-title">A chegada</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://img.elo7.com.br/product/zoom/2C25D05/big-poster-filme-star-wars-o-despertar-da-forca-tam-90x60-cm-poster-star-wars.jpg"
+              alt="Star wars" />
+            <div class="movie-title">Star wars</div>
+
+          </div>
+          </div>
+
+        <h2 class="catalog-title">Terror</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://br.web.img2.acsta.net/pictures/17/01/05/22/10/519378.jpg"
+              alt="Interestelar" />
+            <div class="movie-title">O chamado 3</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" 
+            src="https://br.web.img2.acsta.net/pictures/210/166/21016629_2013062820083878.jpg"
+              alt="American Pie" />
+            <div class="movie-title">Invocação do Mal</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" 
+            src="https://th.bing.com/th/id/R.a4239571bb0c12e3ce8d4284137946ee?rik=ikqIld9qQwzwqw&pid=ImgRaw&r=0"
+              alt="American Pie" />
+            <div class="movie-title">Pânico</div>
+            
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://th.bing.com/th/id/R.14cd970732f4475a68791bcadec2baec?rik=%2fWVLMsnC88wVlQ&pid=ImgRaw&r=0"
+              alt="Annabelle" />
+            <div class="movie-title">Annabelle</div>
+        
+          </div>
+        
+        </div>
+
+        <h2 class="catalog-title">Romance</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://th.bing.com/th/id/OIP.tczeHErX9gHDXPANDJhLDwHaKr?w=186&h=268&c=7&r=0&o=7&pid=1.7&rm=3"
+              alt="Interestelar" />
+            <div class="movie-title">Titanic</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" 
+            src="https://images.justwatch.com/poster/190107318/s718/questao-de-tempo.jpg"
+              alt="Questão de tempo" />
+            <div class="movie-title">Questão de tempo</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" 
+            src="https://i.pinimg.com/originals/a0/33/cf/a033cfa4a3629c9c64c668a2f8c3cb9e.jpg"
+              alt="Crepúsculo" />
+            <div class="movie-title">Crepúsculo</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://i.pinimg.com/originals/1a/d6/21/1ad62127fa88c19dca008ad4be4f2f23.jpg"
+              alt="Annabelle" />
+            <div class="movie-title">Norbit</div>
+            </div>
+            
+            </div>
+
+        <h2 class="catalog-title">Crime</h2>
+        <div class="movie-list">
+          <div class="movie-card">
+            <img class="movie-poster"
+              src="https://th.bing.com/th/id/R.70875816e62790d1eb60587d351069cb?rik=DzVEe0I8CnQNPg&riu=http%3a%2f%2fbr.web.img2.acsta.net%2fr_1280_720%2fmedias%2fnmedia%2f18%2f86%2f95%2f23%2f19870456.jpg&ehk=03IiuwkuHQjjSg%2fADApwkB%2b6nU4jBXUpTSNwcBnX0xo%3d&risl=&pid=ImgRaw&r=0"
+              alt="As branquinhas" />
+            <div class="movie-title">As branquelas</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" 
+            src="https://i.pinimg.com/originals/dd/58/62/dd586203382ee10102c591bff2a551b8.jpg"
+              alt="Coringa" />
+            <div class="movie-title">Coringa</div>
+          </div>
+          <div class="movie-card">
+            <img class="movie-poster" 
+            src="https://m.media-amazon.com/images/M/MV5BZjNkNzk0ZjEtM2M1ZC00MmMxLTlmOWEtNWRlZTc1ZTUyNzY4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
+              alt="Enola Holmes" />
+            <div class="movie-title">Enola Holmes</div>
+          </div>
       </section>
     </div>
   </div>
 
   <script>
-    function entrar() {
-      const nome = document.getElementById('username').value.trim();
-      if (nome.length === 0) {
-        alert('Por favor, digite seu nome!');
-        return;
-      }
-
-      // Esconde a tela de login
-      document.getElementById('login-screen').style.display = 'none';
-
-      // Mostra a tela do catálogo
-      const catalogScreen = document.getElementById('catalog-screen');
-      catalogScreen.style.display = 'flex';
-
-      // Mostra a saudação com o nome do usuário
-      const greetingEl = document.getElementById('greeting');
-      greetingEl.textContent = `Olá, ${nome}! Seja bem-vindo(a) ao catálogo Netflix!`;
-    }
   </script>
 </body>
 
 </html>
-
