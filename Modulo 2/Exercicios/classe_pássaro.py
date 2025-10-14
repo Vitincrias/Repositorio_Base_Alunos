@@ -16,6 +16,8 @@ class Passaro():
         return print(f' Sou um {self.Espécie} que come as migalhas de pão 🥖 ')
     def cores(self):
         return print(f' A cor da minhas penas são {self.Cores} ')
+    def fazer_som(self):
+         return print(f' Sou um {self.Espécie} cantando uma bela canção 🎶 ')
     
 Passaro1 = Passaro (0.14,['Marrom', 'Branco', 'Cinza'], 'Pardal', 'M')
 Passaro1.cantar()
