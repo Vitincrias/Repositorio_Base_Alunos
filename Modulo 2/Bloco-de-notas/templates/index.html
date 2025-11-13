@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloco de Notas do vt</title>
     <style>
-        /* ===== Tema Galáxia — CSS Caprichado ===== */
+        /* ===== Tema Galáxia — Fundo Realista ===== */
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -15,96 +14,91 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Fundo do espaço */
+/* Corpo com fundo galáctico */
 body {
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #e0e0ff;
-    overflow: hidden;
+    overflow: hidden; /* remove qualquer rolagem */
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     position: relative;
 }
 
-/* Estrelas — camadas animadas para dar profundidade */
-body::before, body::after {
+/* Fundo com camadas de estrelas */
+body::before, 
+body::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
+    top: 0; left: 0;
+    width: 200%; height: 200%;
     background-repeat: repeat;
-    animation: moveStars 250s linear infinite;
     z-index: 0;
+    animation: moveStars 300s linear infinite;
 }
 
 body::before {
     background-image: 
-        radial-gradient(1px 1px at 20px 30px, #fff, transparent),
-        radial-gradient(1px 1px at 60px 80px, #9cf, transparent),
-        radial-gradient(2px 2px at 100px 150px, #c9f, transparent),
-        radial-gradient(1px 1px at 200px 220px, #fff, transparent);
+        radial-gradient(1px 1px at 10px 20px, #fff, transparent),
+        radial-gradient(1px 1px at 40px 80px, #9cf, transparent),
+        radial-gradient(2px 2px at 150px 200px, #c9f, transparent),
+        radial-gradient(1px 1px at 300px 400px, #fff, transparent);
     opacity: 0.4;
 }
 
 body::after {
     background-image: 
-        radial-gradient(1px 1px at 10px 20px, #9cf, transparent),
-        radial-gradient(1px 1px at 80px 90px, #fff, transparent),
-        radial-gradient(1px 1px at 130px 150px, #c9f, transparent),
-        radial-gradient(2px 2px at 250px 300px, #9ff, transparent);
+        radial-gradient(2px 2px at 30px 50px, #9cf, transparent),
+        radial-gradient(1px 1px at 100px 250px, #fff, transparent),
+        radial-gradient(1px 1px at 400px 300px, #c9f, transparent),
+        radial-gradient(2px 2px at 600px 500px, #aaf, transparent);
     opacity: 0.2;
-    animation-duration: 400s;
+    animation-duration: 500s;
 }
 
-/* Animação sutil das estrelas */
+/* Movimento sutil das estrelas */
 @keyframes moveStars {
-    from {
-        transform: translate3d(0, 0, 0);
-    }
-    to {
-        transform: translate3d(-1000px, 1000px, 0);
-    }
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-1000px, 1000px, 0); }
 }
 
-/* Container central — bloco translúcido */
+/* Container central */
 div {
     position: relative;
     z-index: 1;
-    background: rgba(20, 20, 35, 0.8);
+    width: 420px;
+    background: rgba(20, 20, 40, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(140, 140, 255, 0.3);
-    width: 420px;
     padding: 25px 30px;
-    backdrop-filter: blur(8px);
+    box-shadow: 0 0 40px rgba(140, 140, 255, 0.3);
+    backdrop-filter: blur(10px);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 div:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 40px rgba(160, 160, 255, 0.4);
+    box-shadow: 0 0 50px rgba(180, 180, 255, 0.4);
 }
 
 /* Lista de notas */
 ul {
     list-style: none;
-    padding: 0;
     margin-bottom: 20px;
-    max-height: 250px;
-    overflow-y: auto;
+    padding: 0;
+    overflow: hidden; /* impede rolagem interna */
 }
 
-/* Estilo das notas */
+/* Itens de nota */
 li {
     background: rgba(255, 255, 255, 0.08);
     margin: 10px 0;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: inset 0 0 8px rgba(150, 150, 255, 0.15);
+    box-shadow: inset 0 0 10px rgba(150, 150, 255, 0.15);
     transition: background 0.3s, transform 0.2s;
 }
 
@@ -155,16 +149,9 @@ input[type="submit"]:hover {
     box-shadow: 0 0 15px rgba(150, 100, 255, 0.6);
 }
 
-/* Barra de rolagem personalizada */
+/* Remove totalmente a barra de rolagem */
 ::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-thumb {
-    background: rgba(150, 150, 255, 0.3);
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(150, 150, 255, 0.5);
+    display: none;
 }
 
     </style>
